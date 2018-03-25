@@ -24,9 +24,9 @@ class SearchCoach extends Component {
                             aria-expanded="false"
                         >Search your coach</button>
                         <div className="dropdown-menu">
-                            <a className="dropdown-item small" href="/">Action</a>
-                            <a className="dropdown-item small" href="/">Another action</a>
-                            <a className="dropdown-item small" href="/">Something else here</a>
+                            <a className="dropdown-item small" href="/">Programming</a>
+                            <a className="dropdown-item small" href="/">Fitness</a>
+                            <a className="dropdown-item small" href="/">Languages</a>
                             <div role="separator" className="dropdown-divider"></div>
                             <a className="dropdown-item small" href="/">Separated link</a>
                         </div>
