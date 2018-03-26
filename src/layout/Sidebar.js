@@ -16,64 +16,35 @@ class Sidebar extends Component {
                 <hr />
                 <div className="text-gray text-capitalize small font-weight-light pb-2">programming</div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label className="form-check-label text-muted small text-capitalize pl-2" for="defaultCheck1">
+                    <input className="form-check-input" type="checkbox" value="" id="programming"/>
+                    <label className="form-check-label text-muted small text-capitalize pl-2" htmlFor="programming">
                         javascript
                     </label>
                     <span className="float-right small pt-1 text-info">15</span>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label className="form-check-label text-muted small text-capitalize pl-2" for="defaultCheck1">
+                    <input className="form-check-input" type="checkbox" value="" id="reactjs"/>
+                    <label className="form-check-label text-muted small text-capitalize pl-2" htmlFor="reactjs">
                         reactjs
                     </label>
                     <span className="float-right small pt-1 text-info">8</span>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label className="form-check-label text-muted small text-capitalize pl-2" for="defaultCheck1">
+                    <input className="form-check-input" type="checkbox" value="" id="angular"/>
+                    <label className="form-check-label text-muted small text-capitalize pl-2" htmlFor="angular">
                         angular
                     </label>
                     <span className="float-right small pt-1 text-info">19</span>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label className="form-check-label text-muted small text-capitalize pl-2" for="defaultCheck1">
+                    <input className="form-check-input" type="checkbox" value="" id="fullstack-js"/>
+                    <label className="form-check-label text-muted small text-capitalize pl-2" htmlFor="fullstack-js">
                         fullstack js
                     </label>
                     <span className="float-right small pt-1 text-info">5</span>
                 </div>
                 <hr />
-                <div className="text-gray text-capitalize small font-weight-light pb-2">programming</div>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label className="form-check-label text-muted small text-capitalize pl-2" for="defaultCheck1">
-                        javascript
-                    </label>
-                    <span className="float-right small pt-1 text-info">15</span>
-                </div>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label className="form-check-label text-muted small text-capitalize pl-2" for="defaultCheck1">
-                        reactjs
-                    </label>
-                    <span className="float-right small pt-1 text-info">8</span>
-                </div>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label className="form-check-label text-muted small text-capitalize pl-2" for="defaultCheck1">
-                        angular
-                    </label>
-                    <span className="float-right small pt-1 text-info">19</span>
-                </div>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label className="form-check-label text-muted small text-capitalize pl-2" for="defaultCheck1">
-                        fullstack js
-                    </label>
-                    <span className="float-right small pt-1 text-info">5</span>
-                </div>
-                <hr />
+                
             </div>
         )
     }

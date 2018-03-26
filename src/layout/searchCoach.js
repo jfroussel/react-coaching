@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import firebase from 'firebase';
+import  '../firebase';
 
 class SearchCoach extends Component {
 
@@ -6,11 +8,27 @@ class SearchCoach extends Component {
 
         super(props);
         this.state = {
-
+            test: ['test1','test2','test3'],
         }
     }
 
+    
+
+
     render() {
+
+        const refCategories = firebase.database().ref().child('categories');
+
+
+        console.log(refCategories);
+
+        
+        const category = Object.keys(refCategories).map((value) =>
+            <a className="dropdown-item small" href="/">{value}</a>
+        );
+
+        
+        
         return (
             
             <form className="form-inline my-2 my-lg-0 ">
@@ -24,11 +42,7 @@ class SearchCoach extends Component {
                             aria-expanded="false"
                         >Search your coach</button>
                         <div className="dropdown-menu">
-                            <a className="dropdown-item small" href="/">Programming (65)</a>
-                            <a className="dropdown-item small" href="/">Fitness (345)</a>
-                            <a className="dropdown-item small" href="/">Languages (122)</a>
-                            <div role="separator" className="dropdown-divider"></div>
-                            <a className="dropdown-item small" href="/">Separated link</a>
+                            {category}
                         </div>
                     </div>
                     <input type="text" className="form-control" aria-label="Text input with dropdown button" />
