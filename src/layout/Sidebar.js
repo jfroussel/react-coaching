@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
 import { } from 'reactstrap';
+import firebase from 'firebase';
+import  '../firebase';
 
 class Sidebar extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-
+           itemsList: []
         }
+
+        
     }
 
     render() {
+        
+        const dbRefObject = firebase.database().ref().child('categories');
+
+        const listItems = dbRefObject.on('value', snap => {
+            let list = Object.keys(snap.val());
+            list.map((e) => 
+              <li>{e}</li>
+            );
+
+        });
+
+        
+       
+        
+       
         return (
             <div className="px-5">
                 <hr />
@@ -44,6 +63,9 @@ class Sidebar extends Component {
                     <span className="float-right small pt-1 text-info">5</span>
                 </div>
                 <hr />
+                <ul>
+                    {listItems}
+                </ul>    
                 
             </div>
         )

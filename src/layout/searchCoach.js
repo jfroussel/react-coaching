@@ -1,36 +1,17 @@
-import React, { Component } from 'react';
-import firebase from 'firebase';
-import  '../firebase';
+import React, {Component} from 'react';
 
 class SearchCoach extends Component {
 
     constructor(props) {
 
         super(props);
-        this.state = {
-            test: ['test1','test2','test3'],
-        }
+        this.state = {}
     }
-
-    
-
 
     render() {
 
-        const refCategories = firebase.database().ref().child('categories');
-
-
-        console.log(refCategories);
-
-        
-        const category = Object.keys(refCategories).map((value) =>
-            <a className="dropdown-item small" href="/">{value}</a>
-        );
-
-        
-        
         return (
-            
+
             <form className="form-inline my-2 my-lg-0 ">
                 <div className="input-group">
                     <div className="input-group-prepend">
@@ -39,13 +20,13 @@ class SearchCoach extends Component {
                             type="button"
                             data-toggle="dropdown"
                             aria-haspopup="true"
-                            aria-expanded="false"
-                        >Search your coach</button>
-                        <div className="dropdown-menu">
-                            {category}
-                        </div>
+                            aria-expanded="false">Search your coach</button>
+                        <div className="dropdown-menu"></div>
                     </div>
-                    <input type="text" className="form-control" aria-label="Text input with dropdown button" />
+                    <input
+                        type="text"
+                        className="form-control"
+                        aria-label="Text input with dropdown button"/>
                     <button className="btn btn-outline-info my-2 my-sm-0" type="submit">Go !</button>
                 </div>
             </form>
