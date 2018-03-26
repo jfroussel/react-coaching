@@ -3,8 +3,6 @@ import img from '../../src/girl.jpg';
 import FormComponent from '../layout/StarRating';
 
 
-
-
 class Card extends Component {
 
     constructor(props) {
@@ -14,13 +12,8 @@ class Card extends Component {
         }
     }
 
-    
-
-
     render() {
 
-       
-        
         return (
             
                 <div className="col-4">

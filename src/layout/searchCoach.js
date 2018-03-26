@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
-import  '../firebase';
+import * as firebase from 'firebase';
+import '../firebase';
+
 
 class SearchCoach extends Component {
 
@@ -8,26 +9,27 @@ class SearchCoach extends Component {
 
         super(props);
         this.state = {
-            test: ['test1','test2','test3'],
+            categoriesList: {},
         }
     }
 
+    componentDidMount() {
+
+        this.firebaseRef = firebase.database().ref().child('categories');
+        this.firebaseCallback = this.firebaseRef.on('value', snap => {
+            this.setState({ categoriesList: Object.keys(snap.val()) });
+            //console.log(this.state.categoriesList);
+        });
+    }
+
     
-
-
     render() {
-
-        const refCategories = firebase.database().ref().child('categories');
-
-
-        console.log(refCategories);
-
-        
-        const category = Object.keys(refCategories).map((value) =>
-            <a className="dropdown-item small" href="/">{value}</a>
+        const categories = this.state.categoriesList;
+        const todoItems = Object.values(categories).map((category, index) =>
+            // Only do this if items have no stable IDs
+            <a className="dropdown-item" href="" key={index}>{category}</a>
+            
         );
-
-        
         
         return (
             
@@ -42,7 +44,7 @@ class SearchCoach extends Component {
                             aria-expanded="false"
                         >Search your coach</button>
                         <div className="dropdown-menu">
-                            {category}
+                            {todoItems}
                         </div>
                     </div>
                     <input type="text" className="form-control" aria-label="Text input with dropdown button" />
