@@ -24,15 +24,15 @@ class SearchCoach extends Component {
                             aria-expanded="false"
                         >Search your coach</button>
                         <div className="dropdown-menu">
-                            <a className="dropdown-item small" href="/">Programming</a>
-                            <a className="dropdown-item small" href="/">Fitness</a>
-                            <a className="dropdown-item small" href="/">Languages</a>
+                            <a className="dropdown-item small" href="/">Programming (65)</a>
+                            <a className="dropdown-item small" href="/">Fitness (345)</a>
+                            <a className="dropdown-item small" href="/">Languages (122)</a>
                             <div role="separator" className="dropdown-divider"></div>
                             <a className="dropdown-item small" href="/">Separated link</a>
                         </div>
                     </div>
                     <input type="text" className="form-control" aria-label="Text input with dropdown button" />
-                    <button className="btn btn-outline-info my-2 my-sm-0" type="submit">Go!</button>
+                    <button className="btn btn-outline-info my-2 my-sm-0" type="submit">Go !</button>
                 </div>
             </form>
 
