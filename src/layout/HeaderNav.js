@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from '../../src/logo.svg';
 import '../App.css';
 import SearchCoach from '../layout/searchCoach';
-
-
 
 class HeaderNav extends Component {
 
     constructor(props) {
         super(props);
-        this.toggle = this.toggle.bind(this);
+        this.toggle = this
+            .toggle
+            .bind(this);
         this.state = {
             isOpen: false
         };
@@ -25,14 +25,20 @@ class HeaderNav extends Component {
         return (
             <div>
                 <nav className="navbar navbar-dark bg-dark">
-                    <a className="navbar-brand text-muted" href="/">
-                        <img src={logo} width="30" height="30" className="d-inline-block align-top App-logo" alt="" />
+                    <a className="navbar-brand text-info" href="/">
+                        <img
+                            src={logo}
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top App-logo"
+                            alt=""/>
                         React-coaching
                     </a>
-                    <SearchCoach />
+                    <SearchCoach/>
                     <button className="btn btn-outline-info my-2 my-sm-0" type="submit">Sign In</button>
                 </nav>
             </div>
+        
         )
     }
 }
